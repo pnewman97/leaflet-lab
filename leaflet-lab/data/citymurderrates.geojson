@@ -1,0 +1,1265 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Arlington",
+        "mrate1997": 3.85,
+        "mrate2000": 4.2,
+        "mrate2003": 2.63,
+        "mrate2006": 3.97,
+        "mrate2009": 3.31,
+        "mrate2012": 4.59,
+        "mrate2015": 2.06,
+        "mrate2018": 1.75
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.102867,
+          32.685678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Aurora",
+        "mrate1997": 6.54,
+        "mrate2000": 7.96,
+        "mrate2003": 6.19,
+        "mrate2006": 5.89,
+        "mrate2009": 5.93,
+        "mrate2012": 8.73,
+        "mrate2015": 6.71,
+        "mrate2018": 8.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.77848,
+          39.696178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Austin",
+        "mrate1997": 6.67,
+        "mrate2000": 4.87,
+        "mrate2003": 3.88,
+        "mrate2006": 2.71,
+        "mrate2009": 2.83,
+        "mrate2012": 3.71,
+        "mrate2015": 2.69,
+        "mrate2018": 3.57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.836521,
+          30.222346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Bakersfield",
+        "mrate1997": 9.76,
+        "mrate2000": 9.31,
+        "mrate2003": 8.66,
+        "mrate2006": 7.81,
+        "mrate2009": 8,
+        "mrate2012": 9.63,
+        "mrate2015": 5.91,
+        "mrate2018": 8.31
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.969794,
+          35.369763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Baltimore",
+        "mrate1997": 46.11,
+        "mrate2000": 40.08,
+        "mrate2003": 42.05,
+        "mrate2006": 43.6,
+        "mrate2009": 38.14,
+        "mrate2012": 34.7,
+        "mrate2015": 55.07,
+        "mrate2018": 50.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.649533,
+          39.319732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Birmingham",
+        "mrate1997": 43.24,
+        "mrate2000": 32.53,
+        "mrate2003": 36.38,
+        "mrate2006": 46.33,
+        "mrate2009": 30.19,
+        "mrate2012": 31.61,
+        "mrate2015": 37.19,
+        "mrate2018": 39.17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.800929,
+          33.530651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Boston",
+        "mrate1997": 7.35,
+        "mrate2000": 6.62,
+        "mrate2003": 6.53,
+        "mrate2006": 12.37,
+        "mrate2009": 8.13,
+        "mrate2012": 7.49,
+        "mrate2015": 6.01,
+        "mrate2018": 7.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.048611,
+          42.355492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Charlotte",
+        "mrate1997": 11.86,
+        "mrate2000": 13.87,
+        "mrate2003": 11.04,
+        "mrate2006": 12.67,
+        "mrate2009": 8.14,
+        "mrate2012": 6.9,
+        "mrate2015": 7.27,
+        "mrate2018": 6.63
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.835905,
+          42.563635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Chesapeake",
+        "mrate1997": 5.95,
+        "mrate2000": 5.52,
+        "mrate2003": 2.43,
+        "mrate2006": 3.29,
+        "mrate2009": 5.46,
+        "mrate2012": 5.33,
+        "mrate2015": 4.67,
+        "mrate2018": 7.42
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.302431,
+          36.673937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Chicago",
+        "mrate1997": 26.45,
+        "mrate2000": 21.79,
+        "mrate2003": 21.09,
+        "mrate2006": 16.86,
+        "mrate2009": 16.87,
+        "mrate2012": 18.61,
+        "mrate2015": 18.28,
+        "mrate2018": 21.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.66063,
+          41.87897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Columbus",
+        "mrate1997": 12.21,
+        "mrate2000": 9.42,
+        "mrate2003": 14.85,
+        "mrate2006": 11.23,
+        "mrate2009": 10.52,
+        "mrate2012": 4,
+        "mrate2015": 9.07,
+        "mrate2018": 9.69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.985586,
+          39.98072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Corpus Christi",
+        "mrate1997": 6.63,
+        "mrate2000": 6.13,
+        "mrate2003": 7.35,
+        "mrate2006": 7.14,
+        "mrate2009": 3.97,
+        "mrate2012": 5.18,
+        "mrate2015": 5.55,
+        "mrate2018": 9.52
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.313642,
+          27.734637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Dallas",
+        "mrate1997": 18.43,
+        "mrate2000": 19.43,
+        "mrate2003": 18.97,
+        "mrate2006": 15.66,
+        "mrate2009": 13.87,
+        "mrate2012": 12.63,
+        "mrate2015": 10.49,
+        "mrate2018": 11.81
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.178154,
+          35.31492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Denver",
+        "mrate1997": 13.06,
+        "mrate2000": 5.77,
+        "mrate2003": 11.09,
+        "mrate2006": 8.76,
+        "mrate2009": 5.88,
+        "mrate2012": 6.32,
+        "mrate2015": 8.25,
+        "mrate2018": 7.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.985798,
+          39.740959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Detroit",
+        "mrate1997": 48.14,
+        "mrate2000": 41.63,
+        "mrate2003": 41.59,
+        "mrate2006": 52.05,
+        "mrate2009": 49.22,
+        "mrate2012": 54.78,
+        "mrate2015": 42.72,
+        "mrate2018": 37.42
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.67596,
+          39.620168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "El Paso",
+        "mrate1997": 4.37,
+        "mrate2000": 3.55,
+        "mrate2003": 3.56,
+        "mrate2006": 2.11,
+        "mrate2009": 1.87,
+        "mrate2012": 3.49,
+        "mrate2015": 2.8,
+        "mrate2018": 5.56
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.488793,
+          31.818409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fort Wayne",
+        "mrate1997": 18.37,
+        "mrate2000": 9.72,
+        "mrate2003": 8.63,
+        "mrate2006": 7.68,
+        "mrate2009": 7.23,
+        "mrate2012": 8.64,
+        "mrate2015": 10.28,
+        "mrate2018": 16.84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.128679,
+          41.113201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fort Worth",
+        "mrate1997": 14.55,
+        "mrate2000": 11.41,
+        "mrate2003": 9.55,
+        "mrate2006": 7.59,
+        "mrate2009": 6.11,
+        "mrate2012": 5.92,
+        "mrate2015": 7.32,
+        "mrate2018": 6.83
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.33181,
+          32.729442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fremont",
+        "mrate1997": 2.06,
+        "mrate2000": 1.47,
+        "mrate2003": 0.97,
+        "mrate2006": 2.86,
+        "mrate2009": 0.94,
+        "mrate2012": 0.9,
+        "mrate2015": 0.87,
+        "mrate2018": 1.27
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.351793,
+          47.656291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fresno",
+        "mrate1997": 14.79,
+        "mrate2000": 5.61,
+        "mrate2003": 8.26,
+        "mrate2006": 11.11,
+        "mrate2009": 8.61,
+        "mrate2012": 10.19,
+        "mrate2015": 7.53,
+        "mrate2018": 7.89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.800612,
+          36.75156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Garland",
+        "mrate1997": 1.95,
+        "mrate2000": 1.85,
+        "mrate2003": 3.19,
+        "mrate2006": 1.35,
+        "mrate2009": 3.1,
+        "mrate2012": 3.05,
+        "mrate2015": 3.39,
+        "mrate2018": 3.74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.640291,
+          32.907748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Glendale",
+        "mrate1997": 6.58,
+        "mrate2000": 5.48,
+        "mrate2003": 6.33,
+        "mrate2006": 9.39,
+        "mrate2009": 7.97,
+        "mrate2012": 5.23,
+        "mrate2015": 5.35,
+        "mrate2018": 4.04
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.185256,
+          33.540229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Greensboro",
+        "mrate1997": 16.53,
+        "mrate2000": 9.38,
+        "mrate2003": 15.15,
+        "mrate2006": 10.74,
+        "mrate2009": 9.05,
+        "mrate2012": 7.69,
+        "mrate2015": 9.12,
+        "mrate2018": 11.93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.84426,
+          36.093163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Henderson",
+        "mrate1997": 1.41,
+        "mrate2000": 4.56,
+        "mrate2003": 5,
+        "mrate2006": 2.22,
+        "mrate2009": 1.6,
+        "mrate2012": 1.53,
+        "mrate2015": 1.41,
+        "mrate2018": 4.49
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.054822,
+          36.034776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Houston",
+        "mrate1997": 13.68,
+        "mrate2000": 11.77,
+        "mrate2003": 13.92,
+        "mrate2006": 18.47,
+        "mrate2009": 13.77,
+        "mrate2012": 10.21,
+        "mrate2015": 13.07,
+        "mrate2018": 12.19
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.361416,
+          29.784753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Indianapolis",
+        "mrate1997": 15.39,
+        "mrate2000": 12.28,
+        "mrate2003": 13.23,
+        "mrate2006": 17.39,
+        "mrate2009": 12.12,
+        "mrate2012": 11.5,
+        "mrate2015": 16.78,
+        "mrate2018": 19.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.143415,
+          39.785871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Jersey City",
+        "mrate1997": 10.99,
+        "mrate2000": 7.08,
+        "mrate2003": 9.9,
+        "mrate2006": 8.99,
+        "mrate2009": 11.34,
+        "mrate2012": 4.37,
+        "mrate2015": 8.72,
+        "mrate2018": 5.41
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.072108,
+          40.710452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Kansas City",
+        "mrate1997": 22.75,
+        "mrate2000": 25.59,
+        "mrate2003": 18.34,
+        "mrate2006": 24.75,
+        "mrate2009": 21.84,
+        "mrate2012": 22.71,
+        "mrate2015": 24.21,
+        "mrate2018": 32.45
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.731462,
+          39.106542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Las Vegas",
+        "mrate1997": 29.34,
+        "mrate2000": 18.81,
+        "mrate2003": 27.65,
+        "mrate2006": 28.06,
+        "mrate2009": 19.36,
+        "mrate2012": 12.87,
+        "mrate2015": 20.41,
+        "mrate2018": 21.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.279104,
+          36.190364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Lincoln",
+        "mrate1997": 3.25,
+        "mrate2000": 1.33,
+        "mrate2003": 2.12,
+        "mrate2006": 2.04,
+        "mrate2009": 1.96,
+        "mrate2012": 1.14,
+        "mrate2015": 0.36,
+        "mrate2018": 1.73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.663162,
+          40.802759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Los Angeles",
+        "mrate1997": 15.86,
+        "mrate2000": 14.89,
+        "mrate2003": 13.83,
+        "mrate2006": 12.79,
+        "mrate2009": 8.25,
+        "mrate2012": 7.73,
+        "mrate2015": 7.09,
+        "mrate2018": 6.41
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.25703,
+          34.05513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Louisville/Jefferson County",
+        "mrate1997": "?",
+        "mrate2000": "?",
+        "mrate2003": "?",
+        "mrate2006": "?",
+        "mrate2009": "?",
+        "mrate2012": 10.42,
+        "mrate2015": 12.69,
+        "mrate2018": 13.09
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.061739,
+          33.144563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Memphis",
+        "mrate1997": 21.62,
+        "mrate2000": 22.61,
+        "mrate2003": 19.41,
+        "mrate2006": 22.99,
+        "mrate2009": 20.4,
+        "mrate2012": 20.41,
+        "mrate2015": 20.32,
+        "mrate2018": 29.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.954644,
+          35.112125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Mesa",
+        "mrate1997": 3.57,
+        "mrate2000": 3.78,
+        "mrate2003": 3.42,
+        "mrate2006": 6.16,
+        "mrate2009": 3.22,
+        "mrate2012": 3.14,
+        "mrate2015": 3.35,
+        "mrate2018": 3.55
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.765222,
+          33.422793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Miami",
+        "mrate1997": 27.12,
+        "mrate2000": 18.21,
+        "mrate2003": 19.81,
+        "mrate2006": 20.02,
+        "mrate2009": 14.91,
+        "mrate2012": 16.91,
+        "mrate2015": 17.92,
+        "mrate2018": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.210268,
+          25.766368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Minneapolis",
+        "mrate1997": 15.33,
+        "mrate2000": 13.07,
+        "mrate2003": 12.02,
+        "mrate2006": 14.9,
+        "mrate2009": 4.7,
+        "mrate2012": 10.04,
+        "mrate2015": 11.95,
+        "mrate2018": 7.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.266563,
+          44.96313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Nashville-Davidson",
+        "mrate1997": 21.2,
+        "mrate2000": 13.2,
+        "mrate2003": 12.81,
+        "mrate2006": 13.82,
+        "mrate2009": 13.26,
+        "mrate2012": 9.93,
+        "mrate2015": 11.94,
+        "mrate2018": 12.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.834683,
+          36.236907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Newark",
+        "mrate1997": 20.8,
+        "mrate2000": 21.2,
+        "mrate2003": 29.49,
+        "mrate2006": 38.08,
+        "mrate2009": 28.9,
+        "mrate2012": 34.54,
+        "mrate2015": 37.71,
+        "mrate2018": 23.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.185043,
+          40.718707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Norfolk",
+        "mrate1997": 22.68,
+        "mrate2000": 18.77,
+        "mrate2003": 16.88,
+        "mrate2006": 11.69,
+        "mrate2009": 17.36,
+        "mrate2012": 13.95,
+        "mrate2015": 11.38,
+        "mrate2018": 8.19
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.256033,
+          36.918882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Oakland",
+        "mrate1997": 25.3,
+        "mrate2000": 20.03,
+        "mrate2003": 27.47,
+        "mrate2006": 36.78,
+        "mrate2009": 26.56,
+        "mrate2012": 32.03,
+        "mrate2015": 21.8,
+        "mrate2018": 16.27
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.954398,
+          40.439161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Oklahoma City",
+        "mrate1997": 12.1,
+        "mrate2000": 7.51,
+        "mrate2003": 9.28,
+        "mrate2006": 9.99,
+        "mrate2009": 11.35,
+        "mrate2012": 14.4,
+        "mrate2015": 11.59,
+        "mrate2018": 6.63
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.602513,
+          35.393761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Omaha",
+        "mrate1997": 8.29,
+        "mrate2000": 9.49,
+        "mrate2003": 8.85,
+        "mrate2006": 8.22,
+        "mrate2009": 7.37,
+        "mrate2012": 9.35,
+        "mrate2015": 11.23,
+        "mrate2018": 4.53
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.990742,
+          41.264998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Orlando",
+        "mrate1997": 7.8,
+        "mrate2000": 11.29,
+        "mrate2003": 10.41,
+        "mrate2006": 22.54,
+        "mrate2009": 12.01,
+        "mrate2012": 9.83,
+        "mrate2015": 14.07,
+        "mrate2018": 14.12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.293691,
+          28.41959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Philadelphia",
+        "mrate1997": 27.18,
+        "mrate2000": 21.02,
+        "mrate2003": 22.89,
+        "mrate2006": 26.73,
+        "mrate2009": 19.8,
+        "mrate2012": 21.24,
+        "mrate2015": 17.45,
+        "mrate2018": 21.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.168428,
+          39.990821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Phoenix",
+        "mrate1997": 14.35,
+        "mrate2000": 11.51,
+        "mrate2003": 17.74,
+        "mrate2006": 16.84,
+        "mrate2009": 8.51,
+        "mrate2012": 8.38,
+        "mrate2015": 7.14,
+        "mrate2018": 8.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.070892,
+          33.60503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Portland",
+        "mrate1997": 9.17,
+        "mrate2000": 3.59,
+        "mrate2003": 4.95,
+        "mrate2006": 3.56,
+        "mrate2009": 3.29,
+        "mrate2012": 3.37,
+        "mrate2015": 3.97,
+        "mrate2018": 3.97
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.650095,
+          45.533467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Raleigh",
+        "mrate1997": 9,
+        "mrate2000": 9.42,
+        "mrate2003": 4.45,
+        "mrate2006": 5.39,
+        "mrate2009": 3.58,
+        "mrate2012": 4.49,
+        "mrate2015": 3.56,
+        "mrate2018": 2.98
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.64439,
+          35.795543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Rochester",
+        "mrate1997": 23.73,
+        "mrate2000": 17.75,
+        "mrate2003": 26.73,
+        "mrate2006": 22.87,
+        "mrate2009": 13.24,
+        "mrate2012": 17.05,
+        "mrate2015": 15.26,
+        "mrate2018": 12.06
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.626889,
+          43.160252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "San Bernardino",
+        "mrate1997": 20.11,
+        "mrate2000": 17.26,
+        "mrate2003": 24.9,
+        "mrate2006": 22.99,
+        "mrate2009": 15.42,
+        "mrate2012": 22.07,
+        "mrate2015": 13.92,
+        "mrate2018": 24.34
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.29278,
+          34.136809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "San Diego",
+        "mrate1997": 5.63,
+        "mrate2000": 4.41,
+        "mrate2003": 5.21,
+        "mrate2006": 5.34,
+        "mrate2009": 3.16,
+        "mrate2012": 3.44,
+        "mrate2015": 2.66,
+        "mrate2018": 2.93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.15529,
+          32.72793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "San Francisco",
+        "mrate1997": 7.75,
+        "mrate2000": 7.6,
+        "mrate2003": 8.79,
+        "mrate2006": 10.83,
+        "mrate2009": 5.61,
+        "mrate2012": 8.44,
+        "mrate2015": 5.92,
+        "mrate2018": 4.68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.431272,
+          37.778008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "San Jose",
+        "mrate1997": 4.99,
+        "mrate2000": 2.12,
+        "mrate2003": 3.19,
+        "mrate2006": 3.13,
+        "mrate2009": 2.98,
+        "mrate2012": 4.66,
+        "mrate2015": 2.84,
+        "mrate2018": 2.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.883844,
+          37.354559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Seattle",
+        "mrate1997": 8.92,
+        "mrate2000": 6.39,
+        "mrate2003": 5.55,
+        "mrate2006": 5.08,
+        "mrate2009": 3.64,
+        "mrate2012": 3.62,
+        "mrate2015": 4.1,
+        "mrate2018": 4.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.331537,
+          47.673455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "St. Louis",
+        "mrate1997": 42.18,
+        "mrate2000": 35.61,
+        "mrate2003": 21.8,
+        "mrate2006": 38.99,
+        "mrate2009": 44.38,
+        "mrate2012": 37.93,
+        "mrate2015": 59.4,
+        "mrate2018": 61.77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.239861,
+          38.635957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "St. Paul",
+        "mrate1997": 8.49,
+        "mrate2000": 6.96,
+        "mrate2003": 6.98,
+        "mrate2006": 5.95,
+        "mrate2009": 4.56,
+        "mrate2012": 4.8,
+        "mrate2015": 5.34,
+        "mrate2018": 5.47
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.09013,
+          44.95304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Tampa",
+        "mrate1997": 11.81,
+        "mrate2000": 12.52,
+        "mrate2003": 13.09,
+        "mrate2006": 7.74,
+        "mrate2009": 6.02,
+        "mrate2012": 6.72,
+        "mrate2015": 9.24,
+        "mrate2018": 5.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.495716,
+          27.935231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Toledo",
+        "mrate1997": 7.83,
+        "mrate2000": 3.83,
+        "mrate2003": 6.87,
+        "mrate2006": 11.75,
+        "mrate2009": 11.39,
+        "mrate2012": 13.66,
+        "mrate2015": 8.58,
+        "mrate2018": 14.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.563838,
+          41.673767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Tulsa",
+        "mrate1997": 10.38,
+        "mrate2000": 8.4,
+        "mrate2003": 15.53,
+        "mrate2006": 13.51,
+        "mrate2009": 17.35,
+        "mrate2012": 10.64,
+        "mrate2015": 14.4,
+        "mrate2018": 15.23
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.916194,
+          36.105819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Washington",
+        "mrate1997": 51.67,
+        "mrate2000": 41.78,
+        "mrate2003": 42.69,
+        "mrate2006": 28.65,
+        "mrate2009": 24.05,
+        "mrate2012": 14.02,
+        "mrate2015": 23.89,
+        "mrate2018": 22.66
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.01712,
+          38.82652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Wichita",
+        "mrate1997": 9.63,
+        "mrate2000": 9,
+        "mrate2003": 5.06,
+        "mrate2006": 7.08,
+        "mrate2009": 6.6,
+        "mrate2012": 5.99,
+        "mrate2015": 6.94,
+        "mrate2018": 10.48
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.339044,
+          37.687692
+        ]
+      }
+    }
+  ]
+}
