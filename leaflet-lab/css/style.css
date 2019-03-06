@@ -1,9 +1,42 @@
 /* Stylesheet by Peter Newman, 2019 */
 
 #mapid {
-	height: 500px
+	height: 500px;
+	width: 80% ;
+	display: inline-block;
+}
+
+
+#panel {
+    width: 16%;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 42px;
+}
+
+.range-slider {
+    width: 50%;
 }
 
 .leaflet-popup-content p {
     margin: 0.2em 0;
 }
+
+#forward {
+    float: right;
+}
+
+#reverse {
+    float: left;
+}
+
+#increase {
+    float: right;
+}
+
+#decrease {
+    float: left;
+}
+
