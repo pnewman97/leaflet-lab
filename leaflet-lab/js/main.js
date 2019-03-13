@@ -4,7 +4,18 @@
 var mymap = L.map('mapid').setView([40, -90], 4);
 //getData(mymap);
 
-//add tile layer...replace project id and accessToken with your own
+//variable that will store index of current attribute (in this case, the given year)
+var index = 0;
+
+function setIndex(ind) {
+	index = ind;
+}
+
+function getIndex() {
+	return index;
+}
+
+//add tile layer
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
@@ -44,155 +55,263 @@ function createPropSymbols(data, map, attributes){
             return pointToLayer(feature, latlng, attributes);
 		}
     }).addTo(map);
-	
 };
 
-function updateFilter(map, val, attributes){
 
+//filter cities list to only include top X cities ( x = attribute)
+function updateFilter(map, attribute){
+	
+	var val = $('#filtervalue').html();
+	
+	map.eachLayer(function(layer){
+    if (layer.feature && layer.feature.properties[attribute]){
+        //access feature properties
+        var props = layer.feature.properties;
+
+        //update each feature's radius based on new attribute values
+		if (props[attribute] > val) {
+			var radius = calcPropRadius(props[attribute]);
+			layer.setRadius(radius);
+		}
+		else layer.setRadius(null);
+
+		createPopup(props, attribute, layer, radius);
+        };
+    });
 
 }
 
 function filterAttributes(data, map, attributes) {
 	
-
-	
 	//create range input element (slider)
-	 $('#panel').append('<p> filter by: </p>');
-    $('#panel').append('<input class="range-slider" min="1" max="60" value="60" id="filter" type="range">');
-/* 	$('#panel').append('<button class="skip" id="decrease">-</button>');
-    $('#panel').append('<button class="skip" id="increase">+</button>');
-	
-	//set slider attributes
-    $('.range-slider').attr({
-        max: 60,
-        min: 1,
-        value: 0,
-        step: 1
-    });
-	
-	//click listener for buttons
-	$('.skip').click(function(){
-        //get the old index value
-		var index = $('.range-slider').val();
-		
-		//increment or decrement depending on button clicked
-        if ($(this).attr('id') == 'increase'){
-            index++;
-            //if past the last attribute, wrap around to first attribute
-            index = index > 60 ? 0 : index;
-        } else if ($(this).attr('id') == 'decrease'){
-            index--;
-            //if past the first attribute, wrap around to last attribute
-            index = index < 0 ? 60 : index;
-        };
-
-        //update slider
-        $('.range-slider').val(index);
-		
-		//Step 9: pass new attribute to update symbols
-        updateFilter(map, attributes[index]);
-    }); */
+	$('#panel').append('<p> filter: </p>');
+    $('#panel').append('<input class="range-slider" min="1" max="60" value="0" id="filter" type="range">');
+	$('#panel').append('<p> Only show me cities that had at least</p><div id="filtervalue">' + 0 + '</div><p>murders per 100,000 in</p><div id="year">' + 1997 + '</div>');
 
     //input listener for slider
     $('#filter').on('input', function(){
         //get the new value
         var val = $(this).val();
-	//	alert(val);
-		
-		//Step 9: pass new val to filter symbols
-        L.geoJSON(data, {
-			filter: function(feature, layer) {
-			//return feature.properties.show_on_map;
-				if (feature.properties.mrate1997 > val) return true;
-				else return false;
-			}
-		}).addTo(map);
-    });
-	
-	
-	
-//	var slider = document.getElementById("#filter");
-//	alert(slider.value);
-
-
-	
+			
+		//replace filter content
+		$('#filtervalue').html(val);
+		var index = getIndex();
+		updateFilter(map, attributes[index]);
+    });	
 }
 
-//Step 10: Resize proportional symbols according to new attribute values
+//Resize proportional symbols according to new attribute values
 function updatePropSymbols(map, attribute){
     map.eachLayer(function(layer){
         if (layer.feature && layer.feature.properties[attribute]){
             //access feature properties
             var props = layer.feature.properties;
-
             //update each feature's radius based on new attribute values
             var radius = calcPropRadius(props[attribute]);
             layer.setRadius(radius);
-
-            //add city to popup content string
-            var popupContent = "<p><b>City:</b> " + props.City + "</p>";
-
-            //add formatted attribute to panel content string
-            var year = attribute.split("e")[1];
-            popupContent += "<p><b>Murder rate in " + year + ":</b> " + props[attribute] + " per 100k</p>";
-
-            //replace the layer popup
-            layer.bindPopup(popupContent, {
-                offset: new L.Point(0,-radius)
-            });
+			createPopup(props, attribute, layer, radius);
         };
     });
+	$('#year').html(attribute.split("e")[1]);
+	updateLegend(map, attribute);
+	updateFilter(map, attribute);
+}
+
+function createPopup(properties, attribute, layer, radius) {
+	//add city to popup content string
+    var popupContent = "<p><b>City:</b> " + properties.City + "</p>";
+
+    //add formatted attribute to panel content string
+    var year = attribute.split("e")[1];
+    popupContent += "<p><b>Murder rate in " + year + ":</b> " + properties[attribute] + " per 100k</p>";
+
+    //replace the layer popup
+    layer.bindPopup(popupContent, {
+        offset: new L.Point(0,-radius)
+    });
+}
+
+//Calculate the max, mean, and min values for a given attribute
+function getCircleValues(map, attribute){
+    //start with min at highest possible and max at lowest possible number
+    var min = Infinity,
+        max = -Infinity;
+
+    map.eachLayer(function(layer){
+        //get the attribute value
+        if (layer.feature){
+            var attributeValue = Number(layer.feature.properties[attribute]);
+
+            //test for min
+            if (attributeValue < min){
+                min = attributeValue;
+            };
+
+            //test for max
+            if (attributeValue > max){
+                max = attributeValue;
+            };
+        };
+    });
+
+    //set mean
+    var mean = (max + min) / 2;
+
+    //return values as an object
+    return {
+        max: max,
+        mean: mean,
+        min: min
+    };
 };
 
-//create new sequence controls
-function createSequenceControls(map, attributes){
-    //create range input element (slider)
-    $('#panel').append('<input class="range-slider" id="sequence" type="range">');
-	$('#panel').append('<button class="skip" id="reverse">Reverse</button>');
-    $('#panel').append('<button class="skip" id="forward">Forward</button>');
+function updateLegend(map, attribute) {
+
+    //create content for legend (split in 'e' of 'mrate')
+    var year = attribute.split("e")[1];
+    var content = 'Homicide rate in year ' + year;
+
+    //replace legend content
+    $('#temporal-legend').html(content);
+	
+	//get the max, mean, and min values as an object
+    var circleValues = getCircleValues(map, attribute);
+	
+	   for (var key in circleValues){
+        //get the radius
+        var radius = calcPropRadius(circleValues[key]);
+
+        //Step 3: assign the cy and r attributes
+        $('#'+key).attr({
+            cy: 59 - radius,
+            r: radius
+        });
+		
+		//Step 4: add legend text
+        $('#'+key+'-text').text(Math.round(circleValues[key]*100)/100 + " per 100k")
+		
+	};
+		
+}
+
+//creates legend
+function createLegend(map, attribute){
+    var LegendControl = L.Control.extend({
+        options: {
+            position: 'bottomright'
+        },
+
+        onAdd: function (map) {
+            // create the control container with a particular class name
+            var container = L.DomUtil.create('div', 'legend-control-container');
+			var year = attribute.split("e")[1];
+            $(container).append('<div id="temporal-legend">Homicide rate in year ' + year + '</div');
+			
+			//start attribute legend svg string
+            var svg = '<svg id="attribute-legend" width="160px" height="60px">';
+			 //array of circle names to base loop on
+			var circles = {max: 20,
+            mean: 40,
+            min: 60};
+
+			//loop to add each circle and text to svg string
+			for (var circle in circles){
+				//circle string
+				svg += '<circle class="legend-circle" id="' + circle + '" fill="#F47821" fill-opacity="0.8" stroke="#000000" cx="30"/>';
+
+				//text string
+				svg += '<text id="' + circle + '-text" x="65" y="' + circles[circle] + '"></text>';
+			};
+
+			//close svg string
+			svg += "</svg>";
+			
+            //add attribute legend svg to container
+            $(container).append(svg);
+
+            return container;
+        }
+    });
+
+    map.addControl(new LegendControl());
+};
+
+
+//Create new sequence controls
+function createSequenceControls(map, attributes){   
+    var SequenceControl = L.Control.extend({
+        options: {
+            position: 'bottomleft'
+        },
+
+        onAdd: function (map) {
+            // create the control container div with a particular class name
+            var container = L.DomUtil.create('div', 'sequence-control-container');
+
+            $(container).append('<input class="range-slider" id="sequence" type="range">');
+			$(container).append('<button class="skip" id="reverse">Reverse</button>');
+			$(container).append('<button class="skip" id="forward">Forward</button>');
+	
+			L.DomEvent.disableClickPropagation(container);
+
+            return container;
+        }
+    });
+	
+	
+
+    map.addControl(new SequenceControl());
 	
 	//set slider attributes
-    $('.range-slider').attr({
-        max: 6,
-        min: 0,
-        value: 0,
-        step: 1
-    });
+	$('#sequence').attr({
+		max: 7,
+		min: 0,
+		value: 0,
+		step: 1
+	});
 	
 	//click listener for buttons
 	$('.skip').click(function(){
-        //get the old index value
+		//get the old index value
 		var index = $('#sequence').val();
 		
 		//increment or decrement depending on button clicked
-        if ($(this).attr('id') == 'forward'){
-            index++;
-            //if past the last attribute, wrap around to first attribute
-            index = index > 6 ? 0 : index;
-        } else if ($(this).attr('id') == 'reverse'){
-            index--;
-            //if past the first attribute, wrap around to last attribute
-            index = index < 0 ? 6 : index;
-        };
+		if ($(this).attr('id') == 'forward'){
+			index++;
+			//if past the last attribute, wrap around to first attribute
+			index = index > 7 ? 0 : index;
+		} else if ($(this).attr('id') == 'reverse'){
+			index--;
+			//if past the first attribute, wrap around to last attribute
+			index = index < 0 ? 7 : index;
+		};
 
-        //update slider
-        $('#sequence').val(index);
+		//update slider
+		$('#sequence').val(index);
+		
+		//pass new attribute to update symbols
+		updatePropSymbols(map, attributes[index]);
+		
+		//update global var index
+		setIndex(index);
+		
+		function getIndex() {return index;}
+	});
+
+	//input listener for slider
+	$('.range-slider').on('input', function(){
+		//get the new index value
+		var index = $(this).val();
 		
 		//Step 9: pass new attribute to update symbols
-        updatePropSymbols(map, attributes[index]);
-    });
-
-    //input listener for slider
-    $('.range-slider').on('input', function(){
-        //get the new index value
-        var index = $(this).val();
+		updatePropSymbols(map, attributes[index]);
+		function getIndex() {return index;}
 		
-		//Step 9: pass new attribute to update symbols
-        updatePropSymbols(map, attributes[index]);
-    });
+		setIndex(index);
+	});
 	
-	
-};
+}
+
 
 //build an attributes array from the data
 function processData(data){
@@ -210,9 +329,6 @@ function processData(data){
         };
     };
 
-    //check result
-    console.log(attributes);
-
     return attributes;
 };
 
@@ -220,8 +336,6 @@ function processData(data){
 function pointToLayer(feature, latlng, attributes){
     //Determine which attribute to visualize with proportional symbols
     var attribute = attributes[0];
-    //check
-    console.log(attribute);
 
     //create marker options
     var options = {
@@ -241,19 +355,7 @@ function pointToLayer(feature, latlng, attributes){
     //create circle marker layer
     var layer = L.circleMarker(latlng, options);
 
-    //build popup content string starting with city...Example 2.1 line 24
-    var popupContent = "<p><b>City:</b> " + feature.properties.City + "</p>";
-
-    //add formatted attribute to popup content string (splitting after the letter e in mrate)
-    var year = attribute.split("e")[1];
-    popupContent += "<p><b>Murder rate in " + year + ":</b> " + feature.properties[attribute] + " per 100k</p>";
-	
-	
-
-    //bind the popup to the circle marker, with support for mobile using offset
-    layer.bindPopup(popupContent, {
-        offset: new L.Point(0,-options.radius) 
-    });
+	createPopup(feature.properties, attribute, layer, options.radius);
 	
 	//event listeners to open popup on hover
     layer.on({
@@ -283,6 +385,7 @@ function getData(){
 			createPropSymbols(response, mymap, attributes);
 			createSequenceControls(mymap, attributes);
 			filterAttributes(response, mymap, attributes);
+			createLegend(mymap, attributes[0]);
         },
 		error: function(xhr, status, error){alert(xhr.responseText);}
     });

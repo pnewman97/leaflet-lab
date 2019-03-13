@@ -1,5 +1,7 @@
 /* Stylesheet by Peter Newman, 2019 */
 
+
+
 #mapid {
 	height: 500px;
 	width: 80% ;
@@ -16,8 +18,37 @@
     line-height: 42px;
 }
 
+p {
+	font-family: Arial;
+}
+
+#filtervalue, #year {
+	font-size: 30px;
+}
+
+
+.sequence-control-container {
+    width: 350px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+}
+
+.legend-control-container {
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    line-height: 45px;
+    text-align: center;
+    border: solid gray 1px;
+	font-family: Arial;
+	font-size: 15px;
+}
+
 .range-slider {
-    width: 50%;
+    width: 200px;
 }
 
 .leaflet-popup-content p {
